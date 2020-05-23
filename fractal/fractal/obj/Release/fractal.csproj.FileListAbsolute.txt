@@ -1,0 +1,9 @@
+C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\bin\Release\fractal.exe.config
+C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\bin\Release\fractal.exe
+C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\bin\Release\fractal.pdb
+C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Release\fractal.Form1.resources
+C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Release\fractal.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Release\fractal.csproj.GenerateResource.cache
+C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Release\fractal.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Release\fractal.exe
+C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Release\fractal.pdb

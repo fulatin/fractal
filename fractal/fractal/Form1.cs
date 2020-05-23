@@ -21,7 +21,7 @@ namespace fractal
         {
             Graphics g;
             g = this.CreateGraphics();
-            Sierpinski_triangle sierpinski_Triangle = new Sierpinski_triangle(g);
+            Sierpinski_triangle sierpinski_Triangle = new Sierpinski_triangle(g);            
             sierpinski_Triangle.Draw(9000);
             
         }

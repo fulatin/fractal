@@ -16,5 +16,10 @@ namespace fractal
         {
             InitializeComponent();
         }
+
+        private void Clickaction(object sender, EventArgs e)
+        {
+
+        }
     }
 }

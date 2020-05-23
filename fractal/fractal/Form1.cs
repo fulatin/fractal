@@ -32,11 +32,12 @@ namespace fractal
     }
     public class Sierpinski_triangle
     {
+        Random Random = new Random();
         Graphics g;
         readonly Pen Pen = new Pen(Color.Black, 4f);
         public int[] a, b, c;//三个初始点
         public double[] temppoint;
-        public double a_Between_temppoint, b_Between_temppoint,c_Between_temppoint;//三个初始点与temppoint的距离
+ //       public double a_Between_temppoint, b_Between_temppoint,c_Between_temppoint;//三个初始点与temppoint的距离
         public Sierpinski_triangle(Graphics graphics)//初始化四个点
         {
             a = new int[] { 400,2 };
@@ -50,6 +51,7 @@ namespace fractal
         }
         public void Draw(long times)//在form上画谢尔并斯基三角，使用递归完成
         {
+            /**
             a_Between_temppoint = Get_Distance(a, temppoint);
             b_Between_temppoint = Get_Distance(b, temppoint);
             c_Between_temppoint = Get_Distance(c, temppoint);
@@ -68,6 +70,18 @@ namespace fractal
             {
                 temppoint = Getmidpoint(c, temppoint);
             }
+            **/
+            int num = Random.Next(1, 4);
+            if (num==1)
+            {
+                temppoint = Getmidpoint(a, temppoint);
+            }else if (num == 2)
+            {
+                temppoint = Getmidpoint(b, temppoint);
+            }else if (num == 3)
+            {
+                temppoint = Getmidpoint(c, temppoint);
+            }
             g.DrawLine(Pen, (float)temppoint[0], (float)temppoint[1], (float)(temppoint[0] + 6), (float)(temppoint[1] + 6));//画出新点
             if (times >= 0)//使用递归完成
             {
@@ -75,10 +89,12 @@ namespace fractal
             }
             
         }
+        /**
         protected double Get_Distance(int[]a , double[] temp)//获取两点间的距离
         {
             return Math.Sqrt(Math.Pow(a[0]-b[0],2)+Math.Pow(a[1]-b[1],2));
         }
+    */
         protected double[] Getmidpoint(int[] a, double[] temp)//获取两点的中点的坐标
         {
             return new double[] {(a[0]+temp[0])/2, (a[1] + temp[1]) / 2 };

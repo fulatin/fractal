@@ -22,7 +22,9 @@ namespace fractal
             Graphics g;
             g = this.CreateGraphics();
             Sierpinski_triangle sierpinski_Triangle = new Sierpinski_triangle(g);
-            sierpinski_Triangle.Draw(1000L);
+            sierpinski_Triangle.times = 10000L;
+            sierpinski_Triangle.Draw();
+            
         }
 
         private void fload(object sender, EventArgs e)
@@ -32,9 +34,10 @@ namespace fractal
     }
     public class Sierpinski_triangle
     {
+        public long times;
         Random Random = new Random();
         Graphics g;
-        readonly Pen Pen = new Pen(Color.Black, 4f);
+        readonly Pen Pen = new Pen(Color.Black, 1f);
         public int[] a, b, c;//三个初始点
         public double[] temppoint;
  //       public double a_Between_temppoint, b_Between_temppoint,c_Between_temppoint;//三个初始点与temppoint的距离
@@ -49,7 +52,7 @@ namespace fractal
             g.DrawLine(Pen, b[0], b[1], b[0] + 0.1f, b[1] + 1f);
             g.DrawLine(Pen, c[0], c[1], c[0] + 0.1f, c[1] + 1f);
         }
-        public void Draw(long times)//在form上画谢尔并斯基三角，使用递归完成
+        public void Draw()//在form上画谢尔并斯基三角，使用递归完成
         {
             /**
             a_Between_temppoint = Get_Distance(a, temppoint);
@@ -71,23 +74,23 @@ namespace fractal
                 temppoint = Getmidpoint(c, temppoint);
             }
             **/
-            int num = Random.Next(1, 4);
-            if (num==1)
+            while (times >= 0)
             {
-                temppoint = Getmidpoint(a, temppoint);
-            }else if (num == 2)
-            {
-                temppoint = Getmidpoint(b, temppoint);
-            }else if (num == 3)
-            {
-                temppoint = Getmidpoint(c, temppoint);
+                int num = Random.Next(1, 4);
+                if (num == 1)
+                {
+                    temppoint = Getmidpoint(a, temppoint);
+                }
+                else if (num == 2)
+                {
+                    temppoint = Getmidpoint(b, temppoint);
+                }
+                else if (num == 3)
+                {
+                    temppoint = Getmidpoint(c, temppoint);
+                }
+                g.DrawLine(Pen, (float)temppoint[0], (float)temppoint[1], (float)(temppoint[0] + 0.0001), (float)(temppoint[1] + 0.0001));//画出新点
             }
-            g.DrawLine(Pen, (float)temppoint[0], (float)temppoint[1], (float)(temppoint[0] + 6), (float)(temppoint[1] + 6));//画出新点
-            if (times >= 0)//使用递归完成
-            {
-                Draw(times - 1);
-            }
-            
         }
         /**
         protected double Get_Distance(int[]a , double[] temp)//获取两点间的距离

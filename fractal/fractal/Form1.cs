@@ -47,6 +47,7 @@ namespace fractal
             c = new int[] { 772, 387 };
             temppoint = new double[] { 12.33f, 123.2f };
             g = graphics;
+            
             g.DrawLine(Pen, a[0], a[1], a[0] + 0.1f, a[1] + 1f);
             g.DrawLine(Pen, b[0], b[1], b[0] + 0.1f, b[1] + 1f);
             g.DrawLine(Pen, c[0], c[1], c[0] + 0.1f, c[1] + 1f);

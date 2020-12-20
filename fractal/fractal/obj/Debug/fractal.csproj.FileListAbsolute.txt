@@ -8,3 +8,6 @@ C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Debug\fracta
 C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Debug\fractal.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Debug\fractal.exe
 C:\Users\Administrator\Documents\GitHub\fractal\fractal\fractal\obj\Debug\fractal.pdb
+E:\git_store\fractal\fractal\fractal\obj\Debug\fractal.csprojAssemblyReference.cache
+E:\git_store\fractal\fractal\fractal\obj\Debug\fractal.exe
+E:\git_store\fractal\fractal\fractal\obj\Debug\fractal.pdb

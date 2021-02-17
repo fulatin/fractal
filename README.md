@@ -1,4 +1,4 @@
 # fractal
- This is created by c#
+## This is created with c#
  
-I made it when I was boring.
+## I made it when I was boring.
